@@ -1,0 +1,119 @@
+* {
+    box-sizing: border-box;
+    font-family: 'Outfit', sans-serif;
+}
+
+:root {
+    /* primary colors
+    - Soft blue: hsl(215, 51%, 70%) 
+    - Cyan: hsl(178, 100%, 50%) */
+    --soft-blue: hsl(215, 51%, 70%);
+    --cyan:hsl(178, 100%, 50%);
+    /* - Very dark blue (main BG): hsl(217, 54%, 11%) 
+    - Very dark blue (card BG): hsl(216, 50%, 16%) 
+    - Very dark blue (line): hsl(215, 32%, 27%) 
+    - White: hsl(0, 0%, 100%) */
+}
+
+body {
+    width: 100vw;
+    height: 100vh;
+    background-color: hsl(217, 54%, 11%);
+    position: relative;
+}
+
+.attribution {
+    position: absolute;
+    bottom: 5px;
+    left: 50%;
+    transform: translate(-50%);
+    color: white;
+}
+
+.layout {
+    background-color: #fff;
+    width: 350px;
+    height: 600px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate( -50% , -50% );
+    background-color: hsl(216, 50%, 16%);
+    padding: 15px;
+    display: grid;
+    grid-template-rows: 50% repeat(auto-fill,1fr);
+    border-radius: 15px;
+}
+
+.layout > div:first-child img {
+    display: block;
+    max-width: 100%;
+    max-height: 100%;
+    border-radius: 15px;
+}
+
+.layout > div:nth-child(2) {
+    color: white;
+    font-weight: 600;
+    font-size: 24px;
+}
+
+.layout > div:nth-child(2):hover {
+    color: var(--cyan);
+}
+
+.layout>div:nth-child(3) {
+    color: var(--soft-blue);
+    font-weight: 300;
+    font-size: 16px;
+    opacity: 0.3;
+}
+
+.layout>div:nth-child(4) {
+    display: flex;
+    justify-content: space-between;
+}
+
+.layout > div:nth-child(4) div:first-of-type {
+    color: var(--cyan);
+}
+
+.layout > div:nth-child(4) div:last-of-type {
+    color: var(--soft-blue);
+}
+
+svg {
+    margin-right: 6px;
+}
+
+
+.creator {
+    border-top: 0.2px solid white ;
+    display: flex;
+    align-items: center;
+    color: var(--soft-blue);
+}
+
+
+
+.creator img {
+    width: 30px;
+    height: 30px;
+    margin-right: 8px;
+}
+
+span {
+    color: white;
+    margin-left: 2px;
+}
+
+span:hover {
+    color: var(--cyan);
+}
+/* @media (max-width:567px) {
+    .layout {
+        top: initial;
+        left: initial;
+        transform: initial;
+    }
+} */
